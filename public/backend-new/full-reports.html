@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta charset="utf-8" />
+  <title>MyOffice - Booking History</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <link rel="apple-touch-icon" href="pages/ico/60.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="pages/ico/76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="pages/ico/120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="pages/ico/152.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta content="MyOffice - Find the right Workspace that suits you"
+    name="description" />
+  <meta content="MyOffice" name="author" />
+  <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="assets/plugins/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="assets/plugins/mapplic/css/mapplic.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/rickshaw/rickshaw.min.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+  <link href="assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"
+    media="screen">
+  <link href="assets/plugins/jquery-datatable/media/css/dataTables.bootstrap.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="assets/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css"
+    rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/datatables-responsive/css/datatables.responsive.css" rel="stylesheet" type="text/css"
+    media="screen" />
+  <link href="assets/css/dashboard.widgets.css" rel="stylesheet" type="text/css" media="screen" />
+  <link href="assets/plugins/icofont/icofont.css" rel="stylesheet" type="text/css" media="screen" />
+  <link class="main-stylesheet" href="pages/css/themes/modern.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/bootstrap-tag/bootstrap-tagsinput.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/dropzone/css/dropzone.css" rel="stylesheet" type="text/css" />
+  <link href="assets/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+  <link class="main-stylesheet" href="pages/css/themes/modern.css" rel="stylesheet" type="text/css" />
+  <link class="main-stylesheet" href="pages/css/pages-icons.css" rel="stylesheet" type="text/css" />
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="fixed-header horizontal-menu horizontal-app-menu dashboard">
+  <!-- START PAGE-CONTAINER -->
+  <div class="header p-r-0">
+    <div class="header-inner header-md-height">
+      <a href="#" class="btn-link toggle-sidebar d-lg-none text-white sm-p-l-0 btn-icon-link"
+        data-toggle="horizontal-menu">
+        <i class="pg-icon">menu</i>
+      </a>
+      <div class="">
+        <div class="brand inline no-border d-sm-inline-block">
+          <img src="assets/img/logo-black.jpg" alt="logo" data-src="assets/img/logo-black.jpg"
+            data-src-retina="assets/img/logo-black.jpg" width="232" height="65">
+        </div>
+      </div>
+      <div class="header-wrap header-wrap-block justify-content-start">
+      <div class="menu-bar header-sm-height">
+        <a href="#" class="btn-link header-icon toggle-sidebar d-lg-none" data-toggle="horizontal-menu">
+          <i class="pg-icon">close</i>
+        </a>
+        <ul>
+          <li class=" active">
+            <a href="index.html">Dashboard</a>
+          </li>
+          <li>
+            <a href="javascript:;"><span class="title">Bookings</span>
+              <span class=" arrow"></span></a>
+                  <ul class="">
+                    <li class="">
+                      <a href="#">Scheduled</a>
+                    </li>
+                    <li class="">
+                      <a href="#">History</a>
+                    </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#"><span class="title">Favourites</span></a>
+          </li>
+        </ul>
+      </div>
+      <a href="#" class="search-link d-lg-inline-block d-none" data-toggle="search"><i class="pg-icon">search</i> Search
+        for a booking or Invoice</span></a>
+     </div>
+
+      <div class="header-wrap justify-content-end">
+        <!-- START NOTIFICATION LIST -->
+      <ul class="d-lg-inline-block d-none  notification-list no-margin b-grey b-l b-r no-style p-l-30 p-r-20">
+        <li class="p-r-10 inline">
+          <div class="dropdown">
+            <a href="javascript:;" id="notification-center" class="header-icon btn-icon-link" data-toggle="dropdown">
+              <span class="material-icons">
+                notifications
+              </span>
+              <span class="bubble"></span>
+            </a>
+            <!-- START Notification Dropdown -->
+            <div class="dropdown-menu notification-toggle" role="menu" aria-labelledby="notification-center">
+              <!-- START Notification -->
+              <div class="notification-panel">
+                <!-- START Notification Body-->
+                <div class="notification-body scrollable">
+                  <!-- START Notification Item-->
+                  <div class="notification-item unread clearfix">
+                    <!-- START Notification Item-->
+                    <div class="heading open">
+                      <a href="#" class="text-complete pull-left d-flex align-items-center">
+                        <i class="pg-icon m-r-10">map</i>
+                        <span class="bold">Carrot Design</span>
+                        <span class="fs-12 m-l-10">David Nester</span>
+                      </a>
+                      <div class="pull-right">
+                        <div class="thumbnail-wrapper d16 circular inline m-t-15 m-r-10 toggle-more-details">
+                          <div><i class="pg-icon">chevron_down</i>
+                          </div>
+                        </div>
+                        <span class=" time">few sec ago</span>
+                      </div>
+                      <div class="more-details">
+                        <div class="more-details-inner">
+                          <h5 class="semi-bold fs-16">“Apple’s Motivation - Innovation <br>
+                            distinguishes between <br>
+                            A leader and a follower.”</h5>
+                          <p class="small hint-text">
+                            Commented on john Smiths wall.
+                            <br> via pages framework.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Notification Item-->
+                    <!-- START Notification Item Right Side-->
+                    <div class="option" data-toggle="tooltip" data-placement="left" title="mark as read">
+                      <a href="#" class="mark"></a>
+                    </div>
+                    <!-- END Notification Item Right Side-->
+                  </div>
+                  <!-- START Notification Body-->
+                  <!-- START Notification Item-->
+                  <div class="notification-item  clearfix">
+                    <div class="heading">
+                      <a href="#" class="text-danger pull-left">
+                        <i class="pg-icon m-r-10">alert_warning</i>
+                        <span class="bold">98% Server Load</span>
+                        <span class="fs-12 m-l-10">Take Action</span>
+                      </a>
+                      <span class="pull-right time">2 mins ago</span>
+                    </div>
+                    <!-- START Notification Item Right Side-->
+                    <div class="option">
+                      <a href="#" class="mark"></a>
+                    </div>
+                    <!-- END Notification Item Right Side-->
+                  </div>
+                  <!-- END Notification Item-->
+                  <!-- START Notification Item-->
+                  <div class="notification-item  clearfix">
+                    <div class="heading">
+                      <a href="#" class="text-warning pull-left">
+                        <i class="pg-icon m-r-10">alert_warning</i>
+                        <span class="bold">Warning Notification</span>
+                        <span class="fs-12 m-l-10">Buy Now</span>
+                      </a>
+                      <span class="pull-right time">yesterday</span>
+                    </div>
+                    <!-- START Notification Item Right Side-->
+                    <div class="option">
+                      <a href="#" class="mark"></a>
+                    </div>
+                    <!-- END Notification Item Right Side-->
+                  </div>
+                  <!-- END Notification Item-->
+                  <!-- START Notification Item-->
+                  <div class="notification-item unread clearfix">
+                    <div class="heading">
+                      <div class="thumbnail-wrapper d24 circular b-white m-r-5 b-a b-white m-t-10 m-r-10">
+                        <img width="30" height="30" data-src-retina="assets/img/profiles/1x.jpg"
+                          data-src="assets/img/profiles/1.jpg" alt="" src="assets/img/profiles/1.jpg">
+                      </div>
+                      <a href="#" class="text-complete pull-left">
+                        <span class="bold">Revox Design Labs</span>
+                        <span class="fs-12 m-l-10">Owners</span>
+                      </a>
+                      <span class="pull-right time">11:00pm</span>
+                    </div>
+                    <!-- START Notification Item Right Side-->
+                    <div class="option" data-toggle="tooltip" data-placement="left" title="mark as read">
+                      <a href="#" class="mark"></a>
+                    </div>
+                    <!-- END Notification Item Right Side-->
+                  </div>
+                  <!-- END Notification Item-->
+                </div>
+                <!-- END Notification Body-->
+                <!-- START Notification Footer-->
+                <div class="notification-footer text-center">
+                  <a href="#" class="">Read all notifications</a>
+                  <a data-toggle="refresh" class="portlet-refresh text-black pull-right" href="#">
+                    <i class="pg-refresh_new"></i>
+                  </a>
+                </div>
+                <!-- START Notification Footer-->
+              </div>
+              <!-- END Notification -->
+            </div>
+            <!-- END Notification Dropdown -->
+          </div>
+        </li>
+        <li class="p-r-10 inline">
+          <div class="dropdown">
+            <a href="javascript:;" id="notification-center" class="header-icon btn-icon-link" data-toggle="dropdown">
+              <span class="material-icons">
+                mail
+              </span>
+              <span class="bubble"></span>
+            </a>
+            <!-- START Notification Dropdown -->
+            <div class="dropdown-menu notification-toggle" role="menu" aria-labelledby="notification-center">
+              <!-- START Notification -->
+              <div class="notification-panel">
+                <!-- START Notification Body-->
+                <div class="notification-body scrollable">
+                  <!-- START Notification Item-->
+                  <div class="notification-item unread clearfix">
+                    <!-- START Notification Item-->
+                    <div class="heading open">
+                      <a href="#" class="text-complete pull-left d-flex align-items-center">
+                        <i class="pg-icon m-r-10">map</i>
+                        <span class="bold">Carrot Design</span>
+                        <span class="fs-12 m-l-10">David Nester</span>
+                      </a>
+                      <div class="pull-right">
+                        <div class="thumbnail-wrapper d16 circular inline m-t-15 m-r-10 toggle-more-details">
+                          <div><i class="pg-icon">chevron_down</i>
+                          </div>
+                        </div>
+                        <span class=" time">few sec ago</span>
+                      </div>
+                      <div class="more-details">
+                        <div class="more-details-inner">
+                          <h5 class="semi-bold fs-16">“Apple’s Motivation - Innovation <br>
+                            distinguishes between <br>
+                            A leader and a follower.”</h5>
+                          <p class="small hint-text">
+                            Commented on john Smiths wall.
+                            <br> via pages framework.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Notification Item-->
+                    <!-- START Notification Item Right Side-->
+                    <div class="option" data-toggle="tooltip" data-placement="left" title="mark as read">
+                      <a href="#" class="mark"></a>
+                    </div>
+                    <!-- END Notification Item Right Side-->
+                  </div>
+                  <!-- START Notification Body-->
+                  <!-- START Notification Item-->
+                  <div class="notification-item  clearfix">
+                    <div class="heading">
+                      <a href="#" class="text-danger pull-left">
+                        <i class="pg-icon m-r-10">alert_warning</i>
+                        <span class="bold">98% Server Load</span>
+                        <span class="fs-12 m-l-10">Take Action</span>
+                      </a>
+                      <span class="pull-right time">2 mins ago</span>
+                    </div>
+                    <!-- START Notification Item Right Side-->
+                    <div class="option">
+                      <a href="#" class="mark"></a>
+                    </div>
+                    <!-- END Notification Item Right Side-->
+                  </div>
+                  <!-- END Notification Item-->
+                  <!-- START Notification Item-->
+                  <div class="notification-item  clearfix">
+                    <div class="heading">
+                      <a href="#" class="text-warning pull-left">
+                        <i class="pg-icon m-r-10">alert_warning</i>
+                        <span class="bold">Warning Notification</span>
+                        <span class="fs-12 m-l-10">Buy Now</span>
+                      </a>
+                      <span class="pull-right time">yesterday</span>
+                    </div>
+                    <!-- START Notification Item Right Side-->
+                    <div class="option">
+                      <a href="#" class="mark"></a>
+                    </div>
+                    <!-- END Notification Item Right Side-->
+                  </div>
+                  <!-- END Notification Item-->
+                  <!-- START Notification Item-->
+                  <div class="notification-item unread clearfix">
+                    <div class="heading">
+                      <div class="thumbnail-wrapper d24 circular b-white m-r-5 b-a b-white m-t-10 m-r-10">
+                        <img width="30" height="30" data-src-retina="assets/img/profiles/1x.jpg"
+                          data-src="assets/img/profiles/1.jpg" alt="" src="assets/img/profiles/1.jpg">
+                      </div>
+                      <a href="#" class="text-complete pull-left">
+                        <span class="bold">Revox Design Labs</span>
+                        <span class="fs-12 m-l-10">Owners</span>
+                      </a>
+                      <span class="pull-right time">11:00pm</span>
+                    </div>
+                    <!-- START Notification Item Right Side-->
+                    <div class="option" data-toggle="tooltip" data-placement="left" title="mark as read">
+                      <a href="#" class="mark"></a>
+                    </div>
+                    <!-- END Notification Item Right Side-->
+                  </div>
+                  <!-- END Notification Item-->
+                </div>
+                <!-- END Notification Body-->
+                <!-- START Notification Footer-->
+                <div class="notification-footer text-center">
+                  <a href="#" class="">Read all notifications</a>
+                  <a data-toggle="refresh" class="portlet-refresh text-black pull-right" href="#">
+                    <i class="pg-refresh_new"></i>
+                  </a>
+                </div>
+                <!-- START Notification Footer-->
+              </div>
+              <!-- END Notification -->
+            </div>
+            <!-- END Notification Dropdown -->
+          </div>
+        </li>
+      </ul>
+      <!-- END NOTIFICATIONS LIST -->
+      <div class="d-flex align-items-center">
+        <!-- START User Info-->
+        <div class="pull-left p-r-10 fs-14 d-lg-inline-block d-none text-white">
+          <span class="semi-bold">Amanda</span>
+        </div>
+        <div class="dropdown pull-right d-lg-block">
+          <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false" aria-label="profile dropdown">
+            <span class="thumbnail-wrapper d32 circular inline">
+              <img src="assets/img/profiles/avatar.jpg" alt="" data-src="assets/img/profiles/avatar.jpg"
+                data-src-retina="assets/img/profiles/avatar_small2x.jpg" width="32" height="32">
+            </span>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
+            <a href="#" class="dropdown-item"><span>Signed in as <br /><b>Amanda</b></span></a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">My Account</a>
+            <a href="#" class="dropdown-item">Wallet</a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">Help</a>
+            <a href="#" class="dropdown-item">Logout</a>
+            <div class="dropdown-divider"></div>
+            <span class="dropdown-item fs-12 hint-text">Last edited by Amanda<br />on Friday at 5:27PM</span>
+          </div>
+        </div>
+        <!-- END User Info-->
+        <div class="lotal-amount">$2431.64 CR</div>
+      </div>
+      </div>  
+      
+    </div>
+  </div>
+  <div class="page-container">
+    <!-- START PAGE CONTENT WRAPPER -->
+    <div class="page-content-wrapper ">
+      <!-- START PAGE CONTENT -->
+      <div class="content sm-gutter">
+        <!-- START BREADCRUMBS--> 
+          <div class="bg-white">
+            <div class="container-fluid pl-5">
+              <ol class="breadcrumb breadcrumb-alt">
+                <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                <li class="breadcrumb-item"><a href="#">Transaction Details</a></li>
+                <li class="breadcrumb-item active">Transactions</li>
+              </ol>
+            </div>
+          </div>
+        <!-- END BREADCRUMBS -->
+        <!-- START CONTAINER FLUID -->
+        <div class="container-fluid p-5">
+           <div class="card card-default card-bordered p-4 card-radious">
+             <div class="row data-search">
+              <div class="col-sm-3 col-md-3">
+                <div class="form-group">
+                  <label>CITY</label>
+                  <select class="full-width" data-init-plugin="select2">
+                    <option value="AZ">Arizona</option>
+                    <option value="CO">Colorado</option>
+                    <option value="ID">Idaho</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="UT">Utah</option>
+                    <option value="WY">Wyoming</option>
+                  </select>
+                </div>    
+              </div>
+              <div class="col-sm-2 col-md-2">
+                <div class="form-group">
+                  <label>FROM</label>
+                  <div class="input-group date col-md-12 p-l-0">
+                    <input type="text" class="form-control" id="datepicker-component">
+                    <div class="input-group-append ">
+                      <span class="input-group-text"><i class="pg-icon">calendar</i></span>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+              <div class="col-sm-2 col-md-2">
+                <div class="form-group">
+                  <label>TO</label>
+                  <div class="input-group date col-md-12 p-l-0">
+                    <input type="text" class="form-control" id="datepicker-component">
+                    <div class="input-group-append ">
+                      <span class="input-group-text"><i class="pg-icon">calendar</i></span>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+              <div class="col-sm-3 col-md-3">
+                <div class="form-group">
+                  <label>QUICK DATE</label>
+                  <select class="full-width form-control">
+                    <option value="pickoption">Pick an option</option>
+                    <option value="yesterday">Yesterday</option>
+                    <option value="today">Today</option>
+                    <option value="thisweekdays">This Weekdays</option>
+                    <option value="thiswholeweek">This Whole Week</option>
+                    <option value="thismonth">This Month</option>
+                    <option value="thisyear">This Year</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-2 col-md-2">
+                <div class="form-group">
+                  <label for="ActivateAdvanceSerach" class="control-label">&nbsp;</label>
+                  <button type="button" class="btn btn-primary form-control" id="ActivateAdvanceSerach">Advance Search</button>
+                  <button type="button" class="btn btn-primary form-control" id="HideActivateAdvanceSerach" style="display: none;">Hide Advance Search</button>
+                 </div>
+              </div>
+             </div>
+             <div class="searchFilters m-b-10" id="AdvanceFilters" style="display: none;">
+             <div class="row">
+              <div class="col-md-2">
+              <div class="form-group">
+                <label>CATEGORY</label>
+                <select class="full-width form-control">
+                  <option value="category1">Category 1</option>
+                  <option value="category2">Category 2</option>
+                  <option value="category3">Category 3</option>
+                </select>
+              </div>
+              </div>
+              <div class="col-md-2">
+                  <div class="form-group">
+                      <label>ID#</label>
+                      <select class="full-width" data-init-plugin="select2">
+                          <option value="">Select Id</option>
+                                                                  <option value="1">Velocity WM Hoodie-GRY</option>
+                                                                  <option value="2">UA HeatGear Vent Leggings-BLK</option>
+                                                                  <option value="3">UA Velocity 2.0 1/2 Zip-NVY</option>
+                                                                  <option value="4">CRSP PRW TACOS</option>
+                                                                  <option value="5">CHICKEN KARAAGE</option>
+                                                                  <option value="6">AHI POKE BOWL</option>
+                                                                  <option value="7">CAPPUCINO</option>
+                                                                  <option value="8">COFFEE</option>
+                                                                  <option value="9">GOURMET FOOD</option>
+                                                                  <option value="10">NATURAL BODY &amp;amp;</option>
+                                                                  <option value="11">TABLE LINENS</option>
+                                                                  <option value="12">DECORATIVE ACC</option>
+                                                                  <option value="13">501® ORIGINAL SHORT SANSOME STRAGGLER</option>
+                                                                  <option value="14">BTTN CARDIGAN</option>
+                                                                  <option value="15">Softest Short-Sleeve Printed Tee</option>
+                                                                  <option value="16">EveryWear Slub-Knit Tee for Women</option>
+                                                                  <option value="17">Soft-Washed Crew-Neck Tee for Men</option>
+                                                                  <option value="18">EveryWear Crew-Neck Tee for Women</option>
+                                                                  <option value="19">Vintage Crew-Neck Tees 3-Pack</option>
+                                                                  <option value="20">Vintage Short-Sleeve Tee for Boys</option>
+                                                                  <option value="21">Soft-Washed Heathered V-Neck Tee</option>
+                                                                  <option value="22">Variety 5-Pack of Triple-Layer</option>
+                                                                  <option value="23">Cheese Old Ched</option>
+                                                                  <option value="24">Perogies Ched&amp;amp;Jala</option>
+                                                                  <option value="25">Octopus</option>
+                                                                  <option value="26">Frozen Squid</option>
+                                                                  <option value="27">Turkey Breast Smoked</option>
+                                                                  <option value="28">Salami O/F</option>
+                                                                  <option value="29">Tortillas 610G</option>
+                                                                  <option value="30">Trip Fare</option>
+                                                                  <option value="31">Shoyu Ramen</option>
+                                                                  <option value="32">Black Tonkotsu Ramen</option>
+                                                                  <option value="33">SW MESH 3PK BLU</option>
+                                                                  <option value="34">BROOM ANY ANGLE GG</option>
+                                                                  <option value="35">DUSTPAN W/ BRSH GG</option>
+                                                                  <option value="36">SHERPA COCONUT MIL</option>
+                                                                  <option value="37">NHL THRW PL BL TRN</option>
+                                                                  <option value="38">OMBRE GR 20X33</option>
+                                                                  <option value="39">NHL SHT ST BL TRNT</option>
+                                                                  <option value="40">PILLAR 3X4 WHT</option>
+                                                                  <option value="41">6" PILLAR WHT S/2</option>
+                                                                  <option value="42">SOLID XL TOTE 16.5</option>
+                                                                  <option value="43">AD BLK UTILITY SLING CROSSBODY</option>
+                                                                  <option value="44">Hatley X Indigo Men's Pajama Set - Winter</option>
+                                                                  <option value="45">Hatley X Indigo Women'S Pajama Set - Winter Small</option>
+                                                                  <option value="46">Hatley X Indigo Kid's Pajama Set - Winter Size 8</option>
+                                                          </select>
+                                    
+                  </div>
+              </div> 
+              <div class="col-md-2">
+                  <div class="form-group">
+                      <label for="sku" class="control-label">BOOKING STATUS</label>
+                      <select class="full-width form-control">
+                        <option value="select status">Select Status</option>
+                        <option value="requested">Requested</option>
+                        <option value="rejected">Rejected</option>
+                        <option value="confirmed">Confirmed</option>
+                        <option value="checkedin">Checked In</option>
+                        <option value="checkedout">Checked Out</option>
+                        <option value="departed">Departed</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                    <label for="sku" class="control-label">TRANSACTION STATUS</label>
+                    <select class="full-width form-control">
+                      <option value="select status">Select Status</option>
+                      <option value="pending">Pending</option>
+                      <option value="completed">Completed</option>
+                    </select>
+                </div>
+            </div>
+             </div>
+             </div>
+           </div>
+            <!-- START card -->
+            <div class="card card-default card-bordered p-4 card-radious">
+              <div class="card-header ">
+                <div class="card-title">
+                  <h4 class="text-uppercase"><strong>Booking History</strong></h4>
+                </div>
+                <div class="pull-right">
+                  <div class="col-xs-12">
+                    <div class="dataTables_length" id="transactionsTable_length">
+                      <label>Show <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="-1">All</option>
+                      </select> entries</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="card-body">
+                <table class="table demo-table-search table-responsive-block data-table" id="tableWithSearch">
+                  <thead>
+                    <tr>
+                      <th style="width:5%;"></th>
+                      <th style="width:5%;">ID#</th>
+                      <th style="width:15%;">Listing Name</th>
+                      <th style="width:15%;text-align: center;">City</th>
+                      <th style="width:10%;">Start Date</th>
+                      <th style="width:10%;">End Date</th>
+                      <th style="width:10%;">Amount</th>
+                      <th style="width:10%;">Book Status</th>
+                      <th style="width:10%;">Transaction Status</th>
+                      <th style="width:10%;">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="v-align-middle semi-bold">
+                        <div class="form-check d-flex align-items-center justify-content-center">
+                          <input type="checkbox" value="3" id="checkbox4">
+                          <label for="checkbox4" class="no-padding no-margin"></label>
+                        </div>
+                      </td>
+                      <td class="v-align-middle semi-bold">
+                        <p>21243</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>Old Navy</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                       <p>Toronto</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-07-2022</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <p>06-10-2022</p>
+                      </td>
+                      <td class="v-align-middle text-center">
+                        <p>$65.00</p>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="requested">Requested</option>
+                          <option value="rejected">Rejected</option>
+                          <option value="confirmed">Confirmed</option>
+                          <option value="checkedin">Checked In</option>
+                          <option value="checkedout">Checked Out</option>
+                          <option value="departed">Departed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <select name="transactionsTable_length" aria-controls="transactionsTable" class="form-control input-sm">
+                          <option value="pending">Pending</option>
+                          <option value="completed">Completed</option>
+                        </select>
+                      </td>
+                      <td class="v-align-middle">
+                        <div class="text-right data-tb-icon">
+                          <div class="btn-group">
+                            <button type="button" class="btn btn-view btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="View">visibility</span>
+                            </button>
+                            <button type="button" class="btn btn-des btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Invoice">article</span>
+                             </button>
+                            <button type="button" class="btn btn-share btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Share">share</span>
+                            </button>
+                            <button type="button" class="btn btn-archive btn-icon btn-lg">
+                              <span class="material-icons" data-toggle="tooltip" data-placement="top" title="Archive">archive</span>
+                             </button>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="row tab-view">
+                  <div class="col-sm-12 mt-5 mb-3">
+                     <div class="view-btn text-center">
+                      <button class="btn btn-primary btn-lg mb-2">Select All</button>
+                      <button class="btn btn-primary btn-lg mb-2">De-Select All</button>
+                      <button class="btn btn-primary btn-lg mb-2">PDF Report</button>
+                      <button class="btn btn-primary btn-lg mb-2">XLS Report</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END card -->
+         </div>
+        <!-- END CONTAINER FLUID -->
+      </div>
+      <!-- END PAGE CONTENT -->
+      <!-- START COPYRIGHT -->
+      <!-- START CONTAINER FLUID -->
+      <!-- START CONTAINER FLUID -->
+      <div class="container-fluid footer">
+        <div class="copyright sm-text-center">
+          <p class="small-text text-black m-0">
+            Copyright © 2022 <b>My Office Inc.</b>All Rights Reserved.
+          </p>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- END COPYRIGHT -->
+    </div>
+    <!-- END PAGE CONTENT WRAPPER -->
+  </div>
+  <!-- END PAGE CONTAINER -->
+  <!--START QUICKVIEW -->
+  <div id="quickview" class="quickview-wrapper" data-pages="quickview">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="">
+        <a href="#quickview-notes" data-target="#quickview-notes" data-toggle="tab" role="tab">Notes</a>
+      </li>
+      <li>
+        <a href="#quickview-alerts" data-target="#quickview-alerts" data-toggle="tab" role="tab">Alerts</a>
+      </li>
+    </ul>
+    <a class="btn-icon-link invert quickview-toggle" data-toggle-element="#quickview" data-toggle="quickview"><i
+        class="pg-icon">close</i></a>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- BEGIN Notes !-->
+      <div class="tab-pane no-padding" id="quickview-notes">
+        <div class="view-port clearfix quickview-notes" id="note-views">
+          <!-- BEGIN Note List !-->
+          <div class="view list" id="quick-note-list">
+            <div class="toolbar clearfix">
+              <ul class="pull-right ">
+                <li>
+                  <a href="#" class="delete-note-link"><i class="pg-icon">trash_alt</i></a>
+                </li>
+                <li>
+                  <a href="#" class="new-note-link" data-navigate="view" data-view-port="#note-views"
+                    data-view-animation="push"><i class="pg-icon">add</i></a>
+                </li>
+              </ul>
+              <button aria-label="" class="btn-remove-notes btn btn-xs btn-block hide"><i
+                  class="pg-icon">close</i>Delete</button>
+            </div>
+            <ul>
+              <!-- BEGIN Note Item !-->
+              <li data-noteid="1" class="d-flex justify-space-between">
+                <div class="left">
+                  <!-- BEGIN Note Action !-->
+                  <div class="form-check warning no-margin">
+                    <input id="qncheckbox1" type="checkbox" value="1">
+                    <label for="qncheckbox1"></label>
+                  </div>
+                  <!-- END Note Action !-->
+                  <!-- BEGIN Note Preview Text !-->
+                  <p class="note-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                  <!-- BEGIN Note Preview Text !-->
+                </div>
+                <!-- BEGIN Note Details !-->
+                <div class="d-flex right justify-content-end">
+                  <!-- BEGIN Note Date !-->
+                  <span class="date">12/12/20</span>
+                  <a href="#" class="d-flex align-items-center" data-navigate="view" data-view-port="#note-views"
+                    data-view-animation="push">
+                    <i class="pg-icon">chevron_right</i>
+                  </a>
+                  <!-- END Note Date !-->
+                </div>
+                <!-- END Note Details !-->
+              </li>
+              <!-- END Note List !-->
+              <!-- BEGIN Note Item !-->
+              <li data-noteid="2" class="d-flex justify-space-between">
+                <div class="left">
+                  <!-- BEGIN Note Action !-->
+                  <div class="form-check warning no-margin">
+                    <input id="qncheckbox2" type="checkbox" value="1">
+                    <label for="qncheckbox2"></label>
+                  </div>
+                  <!-- END Note Action !-->
+                  <!-- BEGIN Note Preview Text !-->
+                  <p class="note-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                  <!-- BEGIN Note Preview Text !-->
+                </div>
+                <!-- BEGIN Note Details !-->
+                <div class="d-flex right justify-content-end">
+                  <!-- BEGIN Note Date !-->
+                  <span class="date">12/12/20</span>
+                  <a href="#" class="d-flex align-items-center" data-navigate="view" data-view-port="#note-views"
+                    data-view-animation="push"><i class="pg-icon">chevron_right</i></a>
+                  <!-- END Note Date !-->
+                </div>
+                <!-- END Note Details !-->
+              </li>
+              <!-- END Note List !-->
+              <!-- BEGIN Note Item !-->
+              <li data-noteid="2" class="d-flex justify-space-between">
+                <div class="left">
+                  <!-- BEGIN Note Action !-->
+                  <div class="form-check warning no-margin">
+                    <input id="qncheckbox3" type="checkbox" value="1">
+                    <label for="qncheckbox3"></label>
+                  </div>
+                  <!-- END Note Action !-->
+                  <!-- BEGIN Note Preview Text !-->
+                  <p class="note-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                  <!-- BEGIN Note Preview Text !-->
+                </div>
+                <!-- BEGIN Note Details !-->
+                <div class="d-flex right justify-content-end">
+                  <!-- BEGIN Note Date !-->
+                  <span class="date">12/12/20</span>
+                  <a href="#" class="d-flex align-items-center" data-navigate="view" data-view-port="#note-views"
+                    data-view-animation="push"><i class="pg-icon">chevron_right</i></a>
+                  <!-- END Note Date !-->
+                </div>
+                <!-- END Note Details !-->
+              </li>
+              <!-- END Note List !-->
+              <!-- BEGIN Note Item !-->
+              <li data-noteid="3" class="d-flex justify-space-between">
+                <div class="left">
+                  <!-- BEGIN Note Action !-->
+                  <div class="form-check warning no-margin">
+                    <input id="qncheckbox4" type="checkbox" value="1">
+                    <label for="qncheckbox4"></label>
+                  </div>
+                  <!-- END Note Action !-->
+                  <!-- BEGIN Note Preview Text !-->
+                  <p class="note-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                  <!-- BEGIN Note Preview Text !-->
+                </div>
+                <!-- BEGIN Note Details !-->
+                <div class="d-flex right justify-content-end">
+                  <!-- BEGIN Note Date !-->
+                  <span class="date">12/12/20</span>
+                  <a href="#" class="d-flex align-items-center" data-navigate="view" data-view-port="#note-views"
+                    data-view-animation="push"><i class="pg-icon">chevron_right</i></a>
+                  <!-- END Note Date !-->
+                </div>
+                <!-- END Note Details !-->
+              </li>
+              <!-- END Note List !-->
+              <!-- BEGIN Note Item !-->
+              <li data-noteid="4" class="d-flex justify-space-between">
+                <div class="left">
+                  <!-- BEGIN Note Action !-->
+                  <div class="form-check warning no-margin">
+                    <input id="qncheckbox5" type="checkbox" value="1">
+                    <label for="qncheckbox5"></label>
+                  </div>
+                  <!-- END Note Action !-->
+                  <!-- BEGIN Note Preview Text !-->
+                  <p class="note-preview">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                  <!-- BEGIN Note Preview Text !-->
+                </div>
+                <!-- BEGIN Note Details !-->
+                <div class="d-flex right justify-content-end">
+                  <!-- BEGIN Note Date !-->
+                  <span class="date">12/12/20</span>
+                  <a href="#" class="d-flex align-items-center" data-navigate="view" data-view-port="#note-views"
+                    data-view-animation="push"><i class="pg-icon">chevron_right</i></a>
+                  <!-- END Note Date !-->
+                </div>
+                <!-- END Note Details !-->
+              </li>
+              <!-- END Note List !-->
+            </ul>
+          </div>
+          <!-- END Note List !-->
+          <div class="view note" id="quick-note">
+            <div>
+              <ul class="toolbar">
+                <li><a href="#" class="close-note-link"><i class="pg-icon">chevron_left</i></a>
+                </li>
+                <li><a href="#" data-action="Bold" class="fs-12"><i class="pg-icon">format_bold</i></a>
+                </li>
+                <li><a href="#" data-action="Italic" class="fs-12"><i class="pg-icon">format_italics</i></a>
+                </li>
+                <li><a href="#" class="fs-12"><i class="pg-icon">link</i></a>
+                </li>
+              </ul>
+              <div class="body">
+                <div>
+                  <div class="top">
+                    <span>21st april 2020 2:13am</span>
+                  </div>
+                  <div class="content">
+                    <div class="quick-note-editor full-width full-height js-input" contenteditable="true"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Notes !-->
+      <!-- BEGIN Alerts !-->
+      <div class="tab-pane no-padding" id="quickview-alerts">
+        <div class="view-port clearfix" id="alerts">
+          <!-- BEGIN Alerts View !-->
+          <div class="view bg-white">
+            <!-- BEGIN View Header !-->
+            <div class="navbar navbar-default navbar-sm">
+              <div class="navbar-inner">
+                <!-- BEGIN Header Controler !-->
+                <a href="javascript:;" class="action p-l-10 link text-color" data-navigate="view" data-view-port="#chat"
+                  data-view-animation="push-parrallax">
+                  <i class="pg-icon">more_horizontal</i>
+                </a>
+                <!-- END Header Controler !-->
+                <div class="view-heading">
+                  Notications
+                </div>
+                <!-- BEGIN Header Controler !-->
+                <a href="#" class="action p-r-10 pull-right link text-color">
+                  <i class="pg-icon">search</i>
+                </a>
+                <!-- END Header Controler !-->
+              </div>
+            </div>
+            <!-- END View Header !-->
+            <!-- BEGIN Alert List !-->
+            <div data-init-list-view="ioslist" class="list-view boreded no-top-border">
+              <!-- BEGIN List Group !-->
+              <div class="list-view-group-container">
+                <!-- BEGIN List Group Header!-->
+                <div class="list-view-group-header text-uppercase">
+                  Calendar
+                </div>
+                <!-- END List Group Header!-->
+                <ul>
+                  <!-- BEGIN List Group Item!-->
+                  <li class="alert-list">
+                    <!-- BEGIN Alert Item Set Animation using data-view-animation !-->
+                    <a href="javascript:;" class="align-items-center" data-navigate="view" data-view-port="#chat"
+                      data-view-animation="push-parrallax">
+                      <p class="">
+                        <span class="text-warning fs-10"><i class="pg-icon">circle_fill</i></span>
+                      </p>
+                      <p class="p-l-10 overflow-ellipsis fs-12">
+                        <span class="text-color">David Nester Birthday</span>
+                      </p>
+                      <p class="p-r-10 ml-auto fs-12 text-right">
+                        <span class="text-warning">Today <br></span>
+                        <span class="text-color">All Day</span>
+                      </p>
+                    </a>
+                    <!-- END Alert Item!-->
+                    <!-- BEGIN List Group Item!-->
+                  </li>
+                  <!-- END List Group Item!-->
+                  <!-- BEGIN List Group Item!-->
+                  <li class="alert-list">
+                    <!-- BEGIN Alert Item Set Animation using data-view-animation !-->
+                    <a href="#" class="align-items-center" data-navigate="view" data-view-port="#chat"
+                      data-view-animation="push-parrallax">
+                      <p class="">
+                        <span class="text-warning fs-10"><i class="pg-icon">circle_fill</i></span>
+                      </p>
+                      <p class="p-l-10 overflow-ellipsis fs-12">
+                        <span class="text-color">Meeting at 2:30</span>
+                      </p>
+                      <p class="p-r-10 ml-auto fs-12 text-right">
+                        <span class="text-warning">Today</span>
+                      </p>
+                    </a>
+                    <!-- END Alert Item!-->
+                  </li>
+                  <!-- END List Group Item!-->
+                </ul>
+              </div>
+              <!-- END List Group !-->
+              <div class="list-view-group-container">
+                <!-- BEGIN List Group Header!-->
+                <div class="list-view-group-header text-uppercase">
+                  Social
+                </div>
+                <!-- END List Group Header!-->
+                <ul>
+                  <!-- BEGIN List Group Item!-->
+                  <li class="alert-list">
+                    <!-- BEGIN Alert Item Set Animation using data-view-animation !-->
+                    <a href="javascript:;" class="p-t-10 p-b-10 align-items-center" data-navigate="view"
+                      data-view-port="#chat" data-view-animation="push-parrallax">
+                      <p class="">
+                        <span class="text-complete fs-10"><i class="pg-icon">circle_fill</i></span>
+                      </p>
+                      <p class="col overflow-ellipsis fs-12 p-l-10">
+                        <span class="text-color link">Jame Smith commented on your status<br></span>
+                        <span class="text-color">“Perfection Simplified - Company Revox"</span>
+                      </p>
+                    </a>
+                    <!-- END Alert Item!-->
+                  </li>
+                  <!-- END List Group Item!-->
+                  <!-- BEGIN List Group Item!-->
+                  <li class="alert-list">
+                    <!-- BEGIN Alert Item Set Animation using data-view-animation !-->
+                    <a href="javascript:;" class="p-t-10 p-b-10 align-items-center" data-navigate="view"
+                      data-view-port="#chat" data-view-animation="push-parrallax">
+                      <p class="">
+                        <span class="text-complete fs-10"><i class="pg-icon">circle_fill</i></span>
+                      </p>
+                      <p class="col overflow-ellipsis fs-12 p-l-10">
+                        <span class="text-color link">Jame Smith commented on your status<br></span>
+                        <span class="text-color">“Perfection Simplified - Company Revox"</span>
+                      </p>
+                    </a>
+                    <!-- END Alert Item!-->
+                  </li>
+                  <!-- END List Group Item!-->
+                </ul>
+              </div>
+              <div class="list-view-group-container">
+                <!-- BEGIN List Group Header!-->
+                <div class="list-view-group-header text-uppercase">
+                  Sever Status
+                </div>
+                <!-- END List Group Header!-->
+                <ul>
+                  <!-- BEGIN List Group Item!-->
+                  <li class="alert-list">
+                    <!-- BEGIN Alert Item Set Animation using data-view-animation !-->
+                    <a href="#" class="p-t-10 p-b-10 align-items-center" data-navigate="view" data-view-port="#chat"
+                      data-view-animation="push-parrallax">
+                      <p class="">
+                        <span class="text-danger fs-10"><i class="pg-icon">circle_fill</i></span>
+                      </p>
+                      <p class="col overflow-ellipsis fs-12 p-l-10">
+                        <span class="text-color link">12:13AM GTM, 10230, ID:WR174s<br></span>
+                        <span class="text-color">Server Load Exceeted. Take action</span>
+                      </p>
+                    </a>
+                    <!-- END Alert Item!-->
+                  </li>
+                  <!-- END List Group Item!-->
+                </ul>
+              </div>
+            </div>
+            <!-- END Alert List !-->
+          </div>
+          <!-- EEND Alerts View !-->
+        </div>
+      </div>
+      <!-- END Alerts !-->
+
+    </div>
+  </div>
+  <!-- END QUICKVIEW-->
+  <!-- START OVERLAY -->
+  <div class="overlay hide" data-pages="search">
+    <!-- BEGIN Overlay Content !-->
+    <div class="overlay-content has-results m-t-20">
+      <!-- BEGIN Overlay Header !-->
+      <div class="container-fluid">
+        <!-- BEGIN Overlay Logo !-->
+        <img class="overlay-brand" src="assets/img/logo.png" alt="logo" data-src="assets/img/logo.png"
+          data-src-retina="assets/img/logo_2x.png" width="78" height="22">
+        <!-- END Overlay Logo !-->
+        <!-- BEGIN Overlay Close !-->
+        <a href="#" class="close-icon-light btn-link btn-rounded  overlay-close text-black">
+          <i class="pg-icon">close</i>
+        </a>
+        <!-- END Overlay Close !-->
+      </div>
+      <!-- END Overlay Header !-->
+      <div class="container-fluid">
+        <!-- BEGIN Overlay Controls !-->
+        <input id="overlay-search" class="no-border overlay-search bg-transparent" placeholder="Search..."
+          autocomplete="off" spellcheck="false">
+        <br>
+        <div class="d-flex align-items-center">
+          <div class="form-check right m-b-0">
+            <input id="checkboxn" type="checkbox" value="1">
+            <label for="checkboxn">Search within page</label>
+          </div>
+          <p class="fs-13 hint-text m-l-10 m-b-0">Press enter to search</p>
+        </div>
+        <!-- END Overlay Controls !-->
+      </div>
+      <!-- BEGIN Overlay Search Results, This part is for demo purpose, you can add anything you like !-->
+      <div class="container-fluid p-t-20">
+        <span class="hint-text">
+          suggestions :
+        </span>
+        <span class="overlay-suggestions"></span>
+        <br>
+        <div class="search-results m-t-30">
+          <p class="bold">Pages Search Results: <span class="overlay-suggestions"></span></p>
+          <div class="row">
+            <div class="col-md-6">
+              <!-- BEGIN Search Result Item !-->
+              <div class="d-flex m-t-15">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular bg-success text-white ">
+                  <img width="36" height="36" src="assets/img/profiles/avatar.jpg"
+                    data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" alt="">
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10">
+                  <h5 class="no-margin "><span class="semi-bold result-name">ice cream</span> on pages</h5>
+                  <p class="small-text hint-text">via john smith</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+              <!-- BEGIN Search Result Item !-->
+              <div class="d-flex m-t-15">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular bg-success text-white ">
+                  <div>T</div>
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10">
+                  <h5 class="no-margin "><span class="semi-bold result-name">ice cream</span> related topics</h5>
+                  <p class="small-text hint-text">via pages</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+              <!-- BEGIN Search Result Item !-->
+              <div class="d-flex m-t-15">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular bg-success text-white ">
+                  <div>M
+                  </div>
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10">
+                  <h5 class="no-margin "><span class="semi-bold result-name">ice cream</span> music</h5>
+                  <p class="small-text hint-text">via pagesmix</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+            </div>
+            <div class="col-md-6">
+              <!-- BEGIN Search Result Item !-->
+              <div class="d-flex m-t-15">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular bg-info text-white d-flex align-items-center">
+                  <i class="pg-icon">facebook</i>
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10">
+                  <h5 class="no-margin "><span class="semi-bold result-name">ice cream</span> on facebook</h5>
+                  <p class="small-text hint-text">via facebook</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+              <!-- BEGIN Search Result Item !-->
+              <div class="d-flex m-t-15">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular bg-complete text-white d-flex align-items-center">
+                  <i class="pg-icon">twitter</i>
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10">
+                  <h5 class="no-margin ">Tweats on<span class="semi-bold result-name"> ice cream</span></h5>
+                  <p class="small-text hint-text">via twitter</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+              <!-- BEGIN Search Result Item !-->
+              <div class="d-flex m-t-15">
+                <!-- BEGIN Search Result Item Thumbnail !-->
+                <div class="thumbnail-wrapper d48 circular text-white bg-danger d-flex align-items-center">
+                  <i class="pg-icon">google_plus</i>
+                </div>
+                <!-- END Search Result Item Thumbnail !-->
+                <div class="p-l-10">
+                  <h5 class="no-margin ">Circles on<span class="semi-bold result-name"> ice cream</span></h5>
+                  <p class="small-text hint-text">via google plus</p>
+                </div>
+              </div>
+              <!-- END Search Result Item !-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END Overlay Search Results !-->
+    </div>
+    <!-- END Overlay Content !-->
+  </div>
+  <!-- END OVERLAY -->
+  <!-- BEGIN VENDOR JS -->
+  <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+  <!--  A polyfill for browsers that don't support ligatures: remove liga.js if not needed-->
+  <script src="assets/plugins/liga.js" type="text/javascript"></script>
+  <script src="assets/plugins/jquery/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
+  <script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/popper/umd/popper.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
+  <script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
+  <script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/select2/js/select2.full.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
+  <script type="text/javascript" src="assets/plugins/dropzone/dropzone.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/jquery-inputmask/jquery.inputmask.min.js"></script>
+  <script src="assets/plugins/bootstrap-form-wizard/js/jquery.bootstrap.wizard.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp" type="text/javascript"></script>
+  <script src="assets/plugins/nvd3/lib/d3.v3.js" type="text/javascript"></script>
+  <script src="assets/plugins/nvd3/nv.d3.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/nvd3/src/utils.js" type="text/javascript"></script>
+  <script src="assets/plugins/nvd3/src/tooltip.js" type="text/javascript"></script>
+  <script src="assets/plugins/nvd3/src/interactiveLayer.js" type="text/javascript"></script>
+  <script src="assets/plugins/nvd3/src/models/axis.js" type="text/javascript"></script>
+  <script src="assets/plugins/nvd3/src/models/line.js" type="text/javascript"></script>
+  <script src="assets/plugins/nvd3/src/models/lineWithFocusChart.js" type="text/javascript"></script>
+  <script src="assets/plugins/mapplic/js/hammer.min.js"></script>
+  <script src="assets/plugins/mapplic/js/jquery.mousewheel.js"></script>
+  <script src="assets/plugins/mapplic/js/mapplic.js"></script>
+  <script src="assets/plugins/rickshaw/rickshaw.min.js"></script>
+  <script src="assets/plugins/jquery-metrojs/MetroJs.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/jquery-sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/skycons/skycons.js" type="text/javascript"></script>
+  <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+  <script src="assets/plugins/moment/moment.min.js"></script>
+  <script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="assets/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+  <script src="assets/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+  <script src="assets/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+  <script src="assets/plugins/handlebars/handlebars-v4.0.5.js"></script>
+  <script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script src="assets/plugins/jquery-datatable/media/js/jquery.dataTables.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.min.js"
+    type="text/javascript"></script>
+  <script src="assets/plugins/jquery-datatable/media/js/dataTables.bootstrap.js" type="text/javascript"></script>
+  <script src="assets/plugins/jquery-datatable/extensions/Bootstrap/jquery-datatable-bootstrap.js"
+    type="text/javascript"></script>
+  <script src="assets/plugins/interactjs/interact.min.js" type="text/javascript"></script>
+  <script src="assets/plugins/moment/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/datatables-responsive/js/datatables.responsive.js"></script>
+  <script type="text/javascript" src="assets/plugins/datatables-responsive/js/lodash.min.js"></script>
+  <!-- END VENDOR JS -->
+  <script src="pages/js/pages.min.js"></script>
+  <script src="pages/js/pages.calendar.min.js"></script>
+    <!-- END CORE TEMPLATE JS -->
+    <!-- BEGIN PAGE LEVEL JS -->
+  <script src="assets/js/calendar_month.js" type="text/javascript"></script>
+  <script src="assets/js/form_elements.js" type="text/javascript"></script>
+  <script src="assets/js/datatables.js" type="text/javascript"></script>
+  <script src="assets/js/scripts.js" type="text/javascript"></script>
+    <!-- END PAGE LEVEL JS -->
+    <script>
+      $("#ActivateAdvanceSerach").click(function () {
+          $("#AdvanceFilters").show();
+          $("#HideActivateAdvanceSerach").show();
+          $("#ActivateAdvanceSerach").hide()
+      });
+      $("#HideActivateAdvanceSerach").click(function () {
+          $("#AdvanceFilters").hide();
+          $("#HideActivateAdvanceSerach").hide();
+          $("#ActivateAdvanceSerach").show();
+      });
+      </script>
+</body>
+</html>
