@@ -6,6 +6,7 @@ Route::group(['prefix' => config('space.space_route_prefix')], function () {
     Route::get('/', 'SpaceController@index')->name('space.search'); // Search
     Route::post('/add-to-favourite', 'SpaceController@addToFavourite'); // add to favourite
 
+    Route::get("/generator/home", 'SpaceController@searchView')->name('space.home'); // Detail
     Route::get("/generator", 'SpaceController@generator')->name('space.generator'); // Detail
     Route::post("/generator", 'SpaceController@generator'); // Detail
     Route::get('/{slug}', 'SpaceController@detail')->name('space.detail'); // Detail

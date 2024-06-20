@@ -3,10 +3,10 @@
     <div class="container-fluid">
         <div class="d-flex justify-content-between mb20">
             <h1 class="title-bar">{{ __('Listing Image Generator') }}</h1>
-            <a class="btn btn-primary" href="{{route('loadImages')}}">Load Images</a> 
+            <a class="btn btn-primary" href="{{route('loadImages')}}">Load Images</a>
         </div>
         @include('admin.message')
- 
+
         <div class="row m-0">
             <div class="panel col-5">
                 <form action="{{ route('space.admin.imageGenerator') }}?method=1" method="post" id="citysearch">
@@ -36,7 +36,7 @@
                         <label class="control-label mt-2 h6">Step 2: Select City <span
                                 class="text-danger">*</span></label><input type="text" id="citySearch"
                             placeholder="{{ __('Search by City...') }}" class="bravo_searchbox form-control"
-                            autocomplete="off" onkeydown="return event.key !== 'Enter';">
+                            autocomplete="off" onkeydown="return event.key !== 'Enter';" required>
                         <input type="hidden" id="selected_city" name="selected_city">
                         <input type="hidden" id="selected_country" name="selected_country">
                     </div>

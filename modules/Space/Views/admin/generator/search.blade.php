@@ -32,7 +32,7 @@
         </div>
         <div class="panel">
             <div class="panel-body">
-                <form action="{{ route('space.admin.imageGenerator') }}?method=1" method="post" class="bravo-form-item">
+                <form action="{{ route('space.admin.imageGenerator') }}?method=1" method="post" class="bravo-form-item" >
                     @csrf
                     <div class="table-responsive">
                         <table class="table table-hover">
@@ -53,7 +53,7 @@
                                     @foreach ($rows as $row)
                                         <tr class="{{ $row->status }}">
                                             <td><input type="checkbox" name="ids[]" class="check-item"
-                                                    value="{{ $row->id }}">
+                                                    value="{{ $row->id }}" required>
                                             </td>
                                             <td class="title">
                                                 <a

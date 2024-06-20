@@ -8,10 +8,14 @@
         <div class="row">
             <div class="col">
                 <div class="panel col-12 m-0 p-0">
+                    <div class="panel-title mb-2 text-center"><strong>{{ __('Found Spaces') }}</strong>
+                    </div>
+                    <a href="{{ route('space.home') }}">
+                        <button
+                            class="btn-secondary btn-sm btn btn-icon btn_search float-right mt-2">{{ __('Back to Dashboard') }}</button>
+                    </a><br /><br />
                     <form action="{{ route('space.generator') }}" method="post" class="bravo-form-item">
 
-                        <div class="panel-title mb-2 text-center"><strong>{{ __('Found Spaces') }}</strong>
-                        </div>
                         <div class="row p-2">
                             <div class="col-3">
                                 <div class="form-group">
@@ -34,10 +38,6 @@
                             </div>
                             <div class="col-3"></div>
                             <div class="text-right col-3">
-                                <a href="{{ route('space.generator') }}">
-                                    <button
-                                        class="btn-secondary btn-sm btn btn-icon btn_search float-right mt-2">{{ __('Back to Dashboard') }}</button>
-                                </a><br /><Br />
                                 <p class="small"><i>{{ __('Found :total items', ['total' => $rows->total()]) }}</i>
                                     <select class="num_rows">
                                         <option @if ($length == 10) selected @endif>10</option>
@@ -73,7 +73,7 @@
                                                 @foreach ($rows as $row)
                                                     <tr class="{{ $row->status }}">
                                                         <td><input type="radio" name="id" class="check-item"
-                                                                value="{{ $row->id }}">
+                                                                value="{{ $row->id }}" required>
                                                         </td>
                                                         <td class="title">
                                                             <a
