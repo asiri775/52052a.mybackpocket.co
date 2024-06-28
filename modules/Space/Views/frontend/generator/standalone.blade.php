@@ -2,6 +2,7 @@
 @section('head')
 @endsection
 @section('content')
+{{--    here --}}
     <div class="container ">
         <div class="row">
             <div class="col">
